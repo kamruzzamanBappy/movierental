@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
-  --breakpoint-3xl: 120rem;
+  /* Moved container styles */
+  --container-center: true;
+  --container-padding: 1.25rem;
+
+  /* Moved colors */
+  --color-primary: #00d991;
 }
-@layer components {
-  .container {
-    --color-primary: #ed3849;
-    --center: true;
-    --padding: 1.25rem;
+
+@layer utilities {
+  .dark {
+    color-scheme: dark;
   }
 }
