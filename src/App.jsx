@@ -1,11 +1,15 @@
- import React from 'react'
+ import React, { useState } from 'react'
 import MovieList from './cine/MovieList'
 import Footer from './Footer'
 import Header from './Header'
 import Sidebar from './Sidebar'
+
+import { MovieContext } from './context'
  const App = () => {
+   const [cartData,setCartData] = useState([]);
    return (
       <>
+      <MovieContext.Provider value={{cartData,setCartData}}>
       <Header />
       <main>
          <div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem]">
@@ -14,6 +18,7 @@ import Sidebar from './Sidebar'
       </div>
       </main>
       <Footer />
+      </MovieContext.Provider> 
       </>
    )
  }
