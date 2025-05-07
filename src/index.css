@@ -9,8 +9,12 @@
   --color-primary: #00d991;
 }
 
-@layer utilities {
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
   .dark {
     color-scheme: dark;
+    background-color: #0c1221;
+    color: white;
   }
 }
